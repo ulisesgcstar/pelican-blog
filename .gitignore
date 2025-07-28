@@ -1,0 +1,19 @@
+# Entorno virtual
+venv/
+
+# Salida compilada
+output/
+
+# Caches de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Config VS Code
+.vscode/
+
+# Otros
+*.log
+.DS_Store
+*.sqlite3
+*.db
