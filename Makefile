@@ -1,6 +1,6 @@
 PY?=
 PELICAN?=pelican
-PELICANOPTS=
+PELICANOPTS=$(CONFFILE)
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -49,7 +49,8 @@ help:
 	@echo '                                                                          '
 
 html:
-	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+	pelican $(INPUTDIR) -o $(OUTPUTDIR) -s $(PELICANOPTS)
+	echo "ulisesgc.com" > $(OUTPUTDIR)/CNAME
 
 clean:
 	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
