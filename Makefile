@@ -1,6 +1,6 @@
 PY?=
 PELICAN?=pelican
-PELICANOPTS=$(CONFFILE)
+PELICANOPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -49,7 +49,7 @@ help:
 	@echo '                                                                          '
 
 html:
-	pelican $(INPUTDIR) -o $(OUTPUTDIR) -s $(PELICANOPTS)
+	pelican $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 	echo "ulisesgc.com" > $(OUTPUTDIR)/CNAME
 
 clean:
@@ -74,6 +74,7 @@ publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 github: publish
+	echo "ulisesgc.com" > $(OUTPUTDIR)/CNAME
 	ghp-import -m "$(GITHUB_PAGES_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)" --no-jekyll
 	git push origin $(GITHUB_PAGES_BRANCH)
 
