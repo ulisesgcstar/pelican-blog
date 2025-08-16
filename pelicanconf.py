@@ -2,6 +2,7 @@ AUTHOR = 'UlisesGC'
 SITENAME = 'TequilaTech'
 SITEURL = ""
 
+THEME = 'themes/blue-penguin'
 PATH = "content"
 
 TIMEZONE = 'America/Mexico_City'
