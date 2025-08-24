@@ -62,3 +62,5 @@ MENUITEMS = (
     ('Proyectos', '/pages/proyectos.html'),
     ('Sobre mí', '/pages/sobre-mi.html'),
 )
+
+THEME_TEMPLATES_OVERRIDES = ['templates']
