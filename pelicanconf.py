@@ -16,6 +16,21 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Guardar el índice del blog en /blog/ en lugar de /
+INDEX_SAVE_AS = 'blog/index.html'
+
+# Guardar las páginas de categorías en /blog/
+CATEGORY_SAVE_AS = 'blog/{slug}.html'
+CATEGORIES_SAVE_AS = 'blog/categories.html'
+
+# Guardar los archivos de etiquetas en /blog/
+TAG_SAVE_AS = 'blog/tag/{slug}.html'
+TAGS_SAVE_AS = 'blog/tags.html'
+
+# Guardar archivos de autores en /blog/
+AUTHOR_SAVE_AS = 'blog/author/{slug}.html'
+AUTHORS_SAVE_AS = 'blog/authors.html'
+
 # Blogroll
 LINKS = (
     ("Pelican", "https://getpelican.com/"),
@@ -34,3 +49,16 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+STATIC_PATHS = ['images']
+
+# Menú personalizado (sin Contacto por ahora)
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+
+MENUITEMS = (
+    ('Inicio', '/'),
+    ('Blog', '/blog/'),
+    ('Proyectos', '/pages/proyectos.html'),
+    ('Sobre mí', '/pages/sobre-mi.html'),
+)
